@@ -8,6 +8,18 @@ import Radio from "@material-ui/core/Radio"
 import RadioGroup from "@material-ui/core/RadioGroup"
 import FormControlLabel from "@material-ui/core/FormControlLabel"
 
+const InteractiveContainerPositioner = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  @media (min-width: 900px) {
+    margin-top: 0;
+    min-width: 40%;
+    margin-left: 3rem;
+  }
+`
+
 const StyledRadioGroupContainer = styled.div`
   display: flex;
   align-items: center;
@@ -64,11 +76,11 @@ const PaddedContainer = styled.div`
   display: flex;
   color: white;
   max-width: 1300px;
-  margin: auto;
+  margin: 2rem auto;
   flex-direction: column;
   justify-content: space-between;
   -webkit-font-smoothing: antialiased;
-  @media (min-width: 576px) {
+  @media (min-width: 900px) {
     flex-direction: row;
     align-items: center;
   }
@@ -321,20 +333,11 @@ const SpringExample = () => {
   return (
     <PaddedContainer>
       <ControlPanel {...config} update={setConfig} />
-      <div
-        style={{
-          width: "40%",
-          flexBasis: "40%",
-          display: "flex",
-          justifyContent: "center",
-          marginLeft: "3rem",
-          alignItems: "center"
-        }}
-      >
+      <InteractiveContainerPositioner>
         <InteractiveContainer>
           <Dismiss config={config} />
         </InteractiveContainer>
-      </div>
+      </InteractiveContainerPositioner>
     </PaddedContainer>
   )
 }
