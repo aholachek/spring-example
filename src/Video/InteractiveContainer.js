@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import iphone from "../Video/clear-phone.svg"
+import iphone from "./clear-phone.svg"
 import hand from "./hand.png"
 
 const Container = styled.div`
