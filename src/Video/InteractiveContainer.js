@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import iphone from "./clear-phone.svg"
-import hand from "./hand.png"
+import { ReactComponent as Iphone } from "./clear-phone.svg"
 
 const Container = styled.div`
   ${props =>
@@ -16,11 +15,11 @@ cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  wi
   width: 371px;
   overflow: ${props => (props.showOverflow ? "visible" : "hidden")};
   user-select: none !important;
-  > img {
+  > svg {
     height: 100%;
     width: 100%;
   }
-  > img,
+  > svg,
   > div {
     position: absolute;
     top: 0;
@@ -39,7 +38,7 @@ cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  wi
 const Video = ({ children, showOverflow, noCursor }) => {
   return (
     <Container showOverflow={showOverflow} noCursor={noCursor}>
-      <img src={iphone} />
+      <Iphone />
       {children}
     </Container>
   )
