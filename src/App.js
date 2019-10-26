@@ -13,7 +13,7 @@ const InteractiveContainerPositioner = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 1rem;
-  @media (min-width: 900px) {
+  @media (min-width: 1100px) {
     margin-top: 0;
     min-width: 40%;
     margin-left: 3rem;
@@ -80,7 +80,7 @@ const PaddedContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   -webkit-font-smoothing: antialiased;
-  @media (min-width: 900px) {
+  @media (min-width: 1100px) {
     flex-direction: row;
     align-items: center;
   }
