@@ -11,10 +11,14 @@ cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  wi
     auto; /*emojicursor.app*/
 `};
   position: relative;
-  height: 770px;
+  height: 600px;
   width: 100%;
   overflow: ${props => (props.showOverflow ? "visible" : "hidden")};
   user-select: none !important;
+  @media (min-width: 768px) {
+    height: 770px;
+  }
+
   > svg {
     height: 100%;
     width: 100%;
