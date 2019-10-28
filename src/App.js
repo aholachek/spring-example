@@ -69,6 +69,8 @@ const LabelFlex = styled.div`
     background-color: transparent;
     color: white;
     border: 0;
+    border-radius: 0;
+    appearance: none;
     font-size: 1rem;
     width: 3.5rem;
     padding: 0.2rem;
@@ -128,7 +130,7 @@ const Flex = styled.div`
   }
 
   .MuiSlider-markLabel {
-    font-size: .7rem !important;
+    font-size: 0.7rem !important;
     @media (min-width: 992px) {
       font-size: 1rem;
       display: block;
