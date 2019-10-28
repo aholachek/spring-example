@@ -141,6 +141,7 @@ const Flex = styled.div`
     }
 
     background: hsla(0, 0%, 0%, 0.2);
+    overflow: hidden;
     ${responsivePadding};
 
     overflow: hidden;
