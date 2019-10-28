@@ -163,7 +163,8 @@ const Flex = styled.div`
   }
 `
 
-const convertVars = (dampingRatio, frequencyResponse) => {
+const convertVars = (dampingRatio = 0, frequencyResponse) => {
+  if (frequencyResponse === 0) frequencyResponse = 0.01
   return {
     tension: Math.pow((2 * Math.PI) / frequencyResponse, 2),
     friction: (4 * Math.PI * dampingRatio) / frequencyResponse
