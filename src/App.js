@@ -46,7 +46,6 @@ const StyledRadioGroupContainer = styled.div`
   }
   .MuiFormGroup-root {
     flex-direction: row;
-    width: 25rem;
     .MuiSvgIcon-root {
       font-size: 1rem;
     }
@@ -56,8 +55,7 @@ const StyledRadioGroupContainer = styled.div`
   }
 
   > div:first-of-type {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+    display: flex;
   }
 `
 const LabelFlex = styled.div`
