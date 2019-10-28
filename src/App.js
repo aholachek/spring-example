@@ -39,7 +39,7 @@ const StyledRadioGroupContainer = styled.div`
     color: #9a86fd;
   }
   .MuiFormControlLabel-label {
-    margin-right: .5rem;
+    margin-right: 0.5rem;
     font-size: 0.95rem !important;
     @media (min-width: 768px) {
       margin-right: 1rem;
@@ -133,7 +133,7 @@ const Flex = styled.div`
   .MuiSlider-markLabel {
     font-size: 0.7rem !important;
     @media (min-width: 992px) {
-      font-size: .9rem !important;
+      font-size: 0.9rem !important;
       display: block;
     }
   }
@@ -149,6 +149,7 @@ const Flex = styled.div`
 
     overflow: hidden;
     @media (min-width: 992px) {
+      overflow: visible;
       border-radius: 9px;
     }
     &:first-of-type {
