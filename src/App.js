@@ -31,7 +31,9 @@ const StyledRadioGroupContainer = styled.div`
   margin-bottom: 1rem;
   background: hsla(0, 0%, 0%, 0.2);
   ${responsivePadding};
-  border-radius: 9px;
+  @media (min-width: 992px) {
+    border-radius: 9px;
+  }
   .MuiIconButton-label {
     color: #9a86fd;
   }
@@ -126,8 +128,9 @@ const Flex = styled.div`
   }
 
   .MuiSlider-markLabel {
-    display:none;
+    font-size: .7rem !important;
     @media (min-width: 992px) {
+      font-size: 1rem;
       display: block;
     }
   }
@@ -141,7 +144,9 @@ const Flex = styled.div`
     ${responsivePadding};
 
     overflow: hidden;
-    border-radius: 9px;
+    @media (min-width: 992px) {
+      border-radius: 9px;
+    }
     &:first-of-type {
       margin-bottom: 1rem;
     }
