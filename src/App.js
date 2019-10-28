@@ -117,6 +117,13 @@ const Flex = styled.div`
     margin-bottom: 2rem;
   }
 
+  .MuiSlider-markLabel {
+    font-size: 0.7rem;
+    @media (min-width: 768px) {
+      font-size: 0.9rem;
+    }
+  }
+
   > div {
     @media (min-width: 992px) {
       min-width: 25rem;
