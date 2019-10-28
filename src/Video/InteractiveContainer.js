@@ -12,13 +12,23 @@ cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  wi
 `};
   position: relative;
   height: 770px;
-  width: 371px;
+  width: 100%;
   overflow: ${props => (props.showOverflow ? "visible" : "hidden")};
   user-select: none !important;
   > svg {
     height: 100%;
     width: 100%;
+    display: none;
   }
+
+  @media (min-width: 768px) {
+    width: 371px;
+
+    > svg {
+      display: block;
+    }
+  }
+
   > svg,
   > div {
     position: absolute;
@@ -27,11 +37,15 @@ cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  wi
   }
 
   > div {
-    height: 531px;
-    width: 347px;
-    top: 77px;
-    left: 12px;
-    overflow: ${props => (props.showOverflow ? "visible" : "hidden")};
+    margin: 0 auto;
+    @media (min-width: 768px) {
+      height: 531px;
+      width: 347px;
+      margin: none;
+      top: 77px;
+      left: 12px;
+      overflow: ${props => (props.showOverflow ? "visible" : "hidden")};
+    }
   }
 `
 

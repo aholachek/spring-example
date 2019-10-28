@@ -72,18 +72,18 @@ const LabelFlex = styled.div`
   }
 `
 const PaddedContainer = styled.div`
-  padding: 1.5rem;
-  display: flex;
-  color: white;
-  max-width: 1300px;
-  margin: 2rem auto;
-  flex-direction: column;
-  justify-content: space-between;
-  -webkit-font-smoothing: antialiased;
-  @media (min-width: 1100px) {
-    flex-direction: row;
+  @media (min-width: 992px) {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
   }
+  color: white;
+  max-width: 1300px;
+  width: 100%;
+  margin: 2rem auto;
+  -webkit-font-smoothing: antialiased;
+
   .MuiSlider-rail {
     opacity: 0.2;
   }
@@ -118,7 +118,9 @@ const Flex = styled.div`
   }
 
   > div {
-    min-width: 25rem;
+    @media (min-width: 992px) {
+      min-width: 25rem;
+    }
 
     background: hsla(0, 0%, 0%, 0.2);
     padding: 1rem 2rem 1rem 2rem;
