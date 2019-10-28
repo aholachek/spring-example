@@ -8,15 +8,20 @@ import Radio from "@material-ui/core/Radio"
 import RadioGroup from "@material-ui/core/RadioGroup"
 import FormControlLabel from "@material-ui/core/FormControlLabel"
 
+const responsivePadding = `
+  padding: 1rem;
+  @media (min-width: 992px) {
+    padding: 1rem 2rem 1rem 2rem;
+  }
+`
 const InteractiveContainerPositioner = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 1rem;
-  @media (min-width: 1100px) {
+  @media (min-width: 992px) {
     margin-top: 0;
     min-width: 40%;
-    margin-left: 3rem;
   }
 `
 
@@ -25,14 +30,17 @@ const StyledRadioGroupContainer = styled.div`
   align-items: center;
   margin-bottom: 1rem;
   background: hsla(0, 0%, 0%, 0.2);
-  padding: 1rem 2rem 1rem 2rem;
+  ${responsivePadding};
   border-radius: 9px;
   .MuiIconButton-label {
     color: #9a86fd;
   }
-  label {
-    font-size: 1rem !important;
+  .MuiFormControlLabel-label {
     margin-right: 1rem;
+    font-size: 0.95rem !important;
+    @media (min-width: 768px) {
+      font-size: 1rem !important;
+    }
   }
   .MuiFormGroup-root {
     flex-direction: row;
@@ -46,8 +54,8 @@ const StyledRadioGroupContainer = styled.div`
   }
 
   > div:first-of-type {
-    font-weight: bold;
-    margin-right: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
   }
 `
 const LabelFlex = styled.div`
@@ -118,9 +126,9 @@ const Flex = styled.div`
   }
 
   .MuiSlider-markLabel {
-    font-size: 0.7rem;
-    @media (min-width: 768px) {
-      font-size: 0.9rem;
+    display:none;
+    @media (min-width: 992px) {
+      display: block;
     }
   }
 
@@ -130,7 +138,9 @@ const Flex = styled.div`
     }
 
     background: hsla(0, 0%, 0%, 0.2);
-    padding: 1rem 2rem 1rem 2rem;
+    ${responsivePadding};
+
+    overflow: hidden;
     border-radius: 9px;
     &:first-of-type {
       margin-bottom: 1rem;
