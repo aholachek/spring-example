@@ -27,6 +27,7 @@ const InteractiveContainerPositioner = styled.div`
 
 const StyledRadioGroupContainer = styled.div`
   display: flex;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
   background: hsla(0, 0%, 0%, 0.2);
@@ -38,12 +39,14 @@ const StyledRadioGroupContainer = styled.div`
     color: #9a86fd;
   }
   .MuiFormControlLabel-label {
-    margin-right: 1rem;
+    margin-right: .5rem;
     font-size: 0.95rem !important;
     @media (min-width: 768px) {
+      margin-right: 1rem;
       font-size: 1rem !important;
     }
   }
+
   .MuiFormGroup-root {
     flex-direction: row;
     .MuiSvgIcon-root {
